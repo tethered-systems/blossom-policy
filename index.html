@@ -109,14 +109,14 @@
     </svg>
   </div>
   <h1>Blossom Privacy Policy</h1>
-  <p>Effective date: 1 November 2026</p>
+  <p>Effective date: 2 November 2026</p>
 </header>
 
 <main>
   <section class="summary">
     <h2>The short version</h2>
     <p><strong>Nothing you log ever leaves your phone.</strong> Blossom is a cycle journal that keeps your entries only on your device. There are no accounts, no servers and no analytics. We (Tethered Systems, the developer) never see, receive or store anything you enter.</p>
-    <p>Blossom is free and shows a small <strong>banner ad</strong> from Google AdMob. The ad uses the internet, so Google receives the usual technical details of an ad request. It <strong>never</strong> receives your logs, dates, symptoms, notes, settings or chosen words. Ads are not personalised and Blossom does not use your advertising ID. A one-time <strong>Remove ads</strong> purchase turns ads off for good.</p>
+    <p>Blossom is free and shows a small <strong>banner ad</strong> from Google AdMob. The ad uses the internet, so Google receives the usual technical details of an ad request. It <strong>never</strong> receives your logs, dates, symptoms, notes, settings or chosen words. Google may personalise ads using your device's advertising ID where you allow it. A one-time <strong>Remove ads</strong> purchase turns ads off for good.</p>
     <p>Your journal only leaves your phone if <strong>you</strong> choose to export an encrypted backup file and pick where to save it.</p>
   </section>
 
@@ -155,7 +155,7 @@
     <p><strong>The banner ad.</strong> Blossom shows one banner at the bottom of its main screens, served by Google AdMob. To fetch an ad, the Google Mobile Ads SDK sends Google the information any ad request carries, such as your IP address (from which Google can estimate your rough location), device model and Android version, app version, and whether the ad was shown or tapped. Google uses this to deliver ads, measure them and prevent fraud. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
     <ul>
       <li><strong>No app data is shared.</strong> Blossom never passes anything from your journal to the ad SDK: no logs, dates, predictions, symptoms, notes, reminders, settings or the words you chose. Ad requests carry no keywords or targeting.</li>
-      <li><strong>Not personalised.</strong> Blossom asks Google for non-personalised ads, and removes Android's advertising ID permission and the Privacy Sandbox ad permissions (ad ID, Topics and attribution) from the app, so ads are not tied to an ID that follows you across apps.</li>
+      <li><strong>Personalised ads and the advertising ID.</strong> The ads SDK can read your device's advertising ID, a resettable ID provided by Google Play services, and Google may use it to personalise ads and measure them. Where the law requires consent, ads are only personalised if you agree, and Google's own policies limit personalisation for people it knows are under 18. You can reset or delete your advertising ID in your phone's settings (Google &rarr; Ads, or Privacy &rarr; Ads), which stops it being used.</li>
       <li><strong>Suitable content.</strong> Ads are limited to content rated for teens and up.</li>
       <li><strong>Consent.</strong> Where the law requires it (for example in the UK, the EEA and Switzerland), Google's consent form asks for your choice before ads load. You can change it any time in <strong>Settings &rarr; Ads &rarr; Ad privacy choices</strong>.</li>
       <li><strong>Offline.</strong> Without internet, no ad is shown and every feature works exactly the same.</li>
@@ -168,7 +168,7 @@
     <ul>
       <li><strong>No uploading of your journal.</strong> The internet is used only for the banner ad and for Google Play purchases.</li>
       <li><strong>No accounts</strong> or sign-in.</li>
-      <li><strong>No analytics, no crash reporting and no advertising ID.</strong></li>
+      <li><strong>No analytics and no crash reporting.</strong> The advertising ID is only read by Google's ads SDK, as described above.</li>
       <li><strong>No third-party code</strong> besides Google's ads, consent and Play Billing libraries described above.</li>
       <li><strong>No sharing and no selling</strong> of your journal, to anyone, ever. We don't have it to share.</li>
     </ul>
@@ -184,10 +184,11 @@
       <li><strong>Biometrics</strong> (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>) Only if you turn on app lock with fingerprint or face unlock. Android handles the check; Blossom never receives your fingerprint or face data.</li>
       <li><strong>Vibration</strong> (<code>VIBRATE</code>) So reminder notifications can vibrate.</li>
       <li><strong>Internet and network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>) Only to load the banner ad, to wait for a connection before trying again, and for Google Play purchases. Your journal is never sent.</li>
+      <li><strong>Advertising ID</strong> (<code>com.google.android.gms.permission.AD_ID</code>) Lets Google's ads SDK read the advertising ID for ads, as described in section 4. The ads SDK also adds Android's ad services permissions (<code>ACCESS_ADSERVICES_AD_ID</code>, <code>_ATTRIBUTION</code>, <code>_TOPICS</code>), which let it use Android's privacy-preserving ad features where your phone supports and allows them.</li>
       <li><strong>Google Play billing</strong> (<code>com.android.vending.BILLING</code>) For the optional Remove ads purchase.</li>
       <li><strong>Keep awake and foreground service</strong> (<code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>) These are added automatically by Android's WorkManager library (used by the home-screen widget library and the ads SDK). Blossom does not use them directly.</li>
     </ul>
-    <p style="margin-top:12px">Blossom does <strong>not</strong> ask for location, contacts, camera, microphone, accounts, storage or advertising ID access.</p>
+    <p style="margin-top:12px">Blossom does <strong>not</strong> ask for location, contacts, camera, microphone, accounts or storage access.</p>
   </section>
 
   <section>
@@ -197,7 +198,7 @@
 
   <section>
     <h2><span class="num">8</span>Children</h2>
-    <p>Blossom is not directed at children under 13. We do not collect personal information ourselves, from anyone. Ads are non-personalised and limited to content rated for teens and up.</p>
+    <p>Blossom is not directed at children under 13. We do not collect personal information ourselves, from anyone. Ads are limited to content rated for teens and up.</p>
   </section>
 
   <section>
